@@ -10,10 +10,10 @@ class App extends Component {
   };
 
   toggleEnerModal = () => {
-    this.setState(state => ({ isEnterOpen: !state.isEnterOpen }));
+    this.setState(state => ({ isEnterOpen: !state.isEnterOpen, isRegistrationOpen: false }));
   };
   toggleRegistrationModal = () => {
-    this.setState(state => ({ isRegistrationOpen: !state.isRegistrationOpen }));
+    this.setState(state => ({ isRegistrationOpen: !state.isRegistrationOpen, isEnterOpen: false }));
   };
 
   render() {
@@ -27,21 +27,23 @@ class App extends Component {
         <div id='Registration'></div>
         <main>
 
-          <button onClick={this.toggleRegistrationModal}>Регистрация</button>
-          {this.state.isRegistrationOpen &&
-            <Registration onClose={this.toggleRegistrationModal}>
-              <h1>Регистрация</h1>
-              <button>Зарегистрироваться</button>
-            </Registration>
-          }
-
           <button onClick={this.toggleEnerModal}>Личный кабинет</button>
           {this.state.isEnterOpen &&
             <EnterToAccountModal onClose={this.toggleEnerModal}>
               <h1>Личный кабинет</h1>
-              <button>Зарегистрироваться</button>
+              <button onClick={this.toggleRegistrationModal} >Зарегистрироваться</button>
             </EnterToAccountModal>
           }
+
+
+          {this.state.isRegistrationOpen &&
+            <Registration onClose={this.toggleRegistrationModal}>
+              <h1>Регистрация</h1>
+              <button onClick={this.toggleEnerModal} >Войти в личный кабинет</button>
+            </Registration>
+          }
+
+
         </main>
       </div>
     );

@@ -16,6 +16,16 @@
 }
 .popup {
     background-color: white;
-    height: 400px;
-    width: 400px;
+    height: 416px;
+    width: 392px;
+}
+.title {
+    padding-top: 44px;
+    text-align: center;
+    font-size: 30px;
+}
+.email_pass {
+    font-size: 12px;
+    color: #ACB5BD;
+    padding-left: 29px;
 }

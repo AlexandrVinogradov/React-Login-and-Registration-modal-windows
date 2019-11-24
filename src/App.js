@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import EnterToAccountModal from './components/EnterToAccountModal/EnterToAccountModal';
 import Registration from './components/RegistrationModal/Registration';
+import s from './components/EnterToAccountModal/EnterToAccountModal.module.css';
+
 
 
 class App extends Component {
@@ -29,10 +31,10 @@ class App extends Component {
           <button onClick={this.toggleEnerModal}>Личный кабинет</button>
           {this.state.isEnterOpen &&
             <EnterToAccountModal onClose={this.toggleEnerModal}>
-              <h1>Личный кабинет</h1>
-              <p>Email</p>
+              <h1 className={s.title}>Личный кабинет</h1>
+              <p className={s.email_pass}>Email</p>
               <input />
-              <p>Пароль</p>
+              <p className={s.email_pass}>Пароль</p>
               <input />
               <button>Войти</button>
               <div>

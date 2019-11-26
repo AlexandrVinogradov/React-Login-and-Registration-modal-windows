@@ -36,15 +36,15 @@ class App extends Component {
               <input />
               <p className={s.email_pass}>Пароль</p>
               <input />
-              <button>Войти</button>
-              <div>
+              <button className={s.enter_btn}>Войти</button>
+              <div className={s.footer}>
                 <div>
-                  <p>Еще нет аккаунта?</p>
-                  <button onClick={this.toggleRegistrationModal}>Зарегистророваться</button>
+                  <p className={s.footer__descr}>Еще нет аккаунта?</p>
+                  <button className={s.footer__btn} onClick={this.toggleRegistrationModal}>Зарегистророваться</button>
                 </div>
-                <div>
-                  <p>Забыли пароль?</p>
-                  <button onClick={this.toggleEnerModal} >Восстановить</button>
+                <div className={s.footer__block}>
+                  <p className={s.footer__descr}>Забыли пароль?</p>
+                  <button className={s.footer__btn} onClick={this.toggleEnerModal} >Восстановить</button>
                 </div>
               </div>
             </EnterToAccountModal>

@@ -37,6 +37,8 @@ input {
     border-radius: 40px;
     height: 40px;
     width: 335px;
+    border: 0;
+    box-shadow: inset 0px 2px 0px #D3DAE1;
 }
 .enter_btn {
     background: #7EB336;
@@ -45,6 +47,7 @@ input {
     height: 40px;
     margin-top: 26px;
     margin-left: 26px;
+    border: 0;
 
     font-family: Panton;
     font-size: 17px;
@@ -55,7 +58,7 @@ input {
 }
 .footer {
     display: flex;
-    padding-left: 29px;
+    padding: 0px 29px 0px 29px;
 
 }
 .footer__btn {
@@ -65,6 +68,7 @@ input {
     cursor: pointer;
     background-color: transparent;
     color: #36BED9;
+    float: right;
 
     font-family: Ubuntu;
     font-style: normal;
@@ -79,9 +83,7 @@ input {
     font-size: 13px;
     line-height: 20px;
 }
-.footer__block {
-    /* padding-left: 109px; */
-    /* float: right; */
-    justify-content: flex-end;
+.footer {
+    justify-content: space-between;
 
 }

@@ -35,7 +35,10 @@ class App extends Component {
               <h1 className={s.title}>Личный кабинет</h1>
               <p className={s.email_pass}>Email</p>
               <input />
-              <p className={s.email_pass}>Пароль</p>
+              <div className={s.pass_block}>
+                <p className={s.email_pass}>Пароль</p>
+                <button className={s.eye}></button>
+              </div>
               <input />
               <button className={s.enter_btn}>Войти</button>
               <div className={s.footer}>

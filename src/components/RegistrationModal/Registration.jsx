@@ -8,7 +8,7 @@ export default class Registration extends React.Component {
         return ReactDOM.createPortal(
             <div className={s.modal}>
                 <div className={s.popup}> 
-                    <button className={s.modal__close_button} onClick={this.props.onClose}>Закрыть</button>
+                    <button className={s.modal__close_button} onClick={this.props.onClose}></button>
                     {this.props.children}
                 </div>
             </div>,

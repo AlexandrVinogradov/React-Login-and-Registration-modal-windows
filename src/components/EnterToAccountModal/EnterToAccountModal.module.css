@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     color: black;
-    background-color: rgba(0,0,0, .9);
+    background: rgba(0, 0, 0, 0.36);
     z-index: 100;
 }
 .modal .modal__close_button {
@@ -62,7 +62,7 @@ input {
     margin-left: 26px;
     border: 0;
 
-    font-family: Panton;
+    font-family: PantonRegular, Helvetica, Arial, sans-serif;
     font-size: 17px;
     line-height: 20px;
     color: #FFFFFF;
@@ -98,11 +98,12 @@ input {
     line-height: 20px;
     margin: 0;
     padding-top: 26px;
+    color: #5D6978;
 }
 
 @font-face {
     font-family: "PantonRegular";
-    src: url("../../fonts/Panton/Panton-Regular.ttf") format("truetype");
+    src: url("../../fonts/Panton/Panton-Light.otf") format("truetype");
    }
 @font-face {
     font-family: "Ubuntu";

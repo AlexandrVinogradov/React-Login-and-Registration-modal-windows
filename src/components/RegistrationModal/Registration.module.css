@@ -1,3 +1,6 @@
+* {
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
 .modal {
     position: absolute;
     top: 0;
@@ -7,15 +10,169 @@
     align-items: center;
     justify-content: center;
     color: black;
-    background-color: rgba(0,0,0, .9);
+    background: rgba(0, 0, 0, 0.36);
     z-index: 100;
 }
-  
 .modal .modal__close_button {
     float: right;
+    background: url('../../assets/icons/close.svg') no-repeat 0 0;
+    height: 17px;
+    width: 17px;
+    border: 0;
+    margin: 18px 23px 0 0;
 }
 .popup {
     background-color: white;
-    height: 400px;
-    width: 400px;
+    height: 534px;
+    width: 392px;
+}
+.title {
+    padding-top: 24px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'PantonRegular', Helvetica, Arial, sans-serif;
+    padding-bottom: 7px;
+    margin-bottom: 0;
+}
+.reg_info {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    width: 280px;
+    color: #5D6978;
+    margin: 0 auto;
+    text-align: center;
+}
+.reg_info__green {
+    font-family: PantonBold, Helvetica, Arial, sans-serif;
+    color: rgb(95, 219, 37);
+}
+.email_pass {
+    font-size: 12px;
+    color: #ACB5BD;
+    padding-left: 29px;
+}
+.maxSymbols {
+    margin-top: 11px;
+    font-size: 12px;
+    color: #ACB5BD;
+    padding-left: 29px;
+    text-align: center;
+}
+.agree {
+    display: flex;
+}
+.agree input {
+   height: 20px;
+   width: 20px;
+   margin: 0; 
+   margin-left: 56px;
+   border: 0;
+   background: #F2F4F6;
+   box-shadow: inset 0px 2px 0px #D3DAE1;
+}
+.agree__title {
+    margin: 0;
+    padding-left: 10px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #5D6978;
+}
+.agree__title a {
+    color: rgb(36, 206, 248);
+}
+input {
+    margin-left: 29px;
+    background: #F2F4F6;
+    /* border: 2px solid #F23D18; */
+    box-sizing: border-box;
+    border-radius: 40px;
+    height: 40px;
+    width: 335px;
+    border: 0;
+    box-shadow: inset 0px 2px 0px #D3DAE1;
+    padding-left: 20px;
+    color: #5D6978;
+
+    font-size: 13px;
+    line-height: 20px;
+}
+.registration_btn {
+    background: #36BED9;
+    border-radius: 40px;
+    width: 280px;
+    height: 40px;
+    margin-top: 16px;
+    margin-left: 56px;
+    margin-bottom: 20px;
+    border: 0;
+
+    font-family: PantonRegular, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+
+
+.footer {
+
+    text-align: center;
+}
+.footer__btn {
+    border-style: none;
+    border-bottom: 1px dashed #36BED9;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: #36BED9;
+
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+}
+.footer__descr {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0;
+    color: #5D6978;
+}
+
+@font-face {
+    font-family: "PantonRegular";
+    src: url("../../fonts/Panton/Panton-Light.otf") format("truetype");
+   }
+@font-face {
+    font-family: "PantonBold";
+    src: url("../../fonts/Panton/Panton-bold.ttf") format("truetype");
+   }
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../../fonts/Ubluntu/Ubuntu-regular.ttf") format("truetype");
+   }
+
+.pass_block {
+    display: flex;
+    position: relative;
+}
+.eye {
+    background: url('../../assets/icons/eye.png') no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    position: absolute;
+    left: 328px;
+    top: 49px;
 }

@@ -1,3 +1,6 @@
+* {
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
 .modal {
     position: absolute;
     top: 0;
@@ -10,7 +13,6 @@
     background-color: rgba(0,0,0, .9);
     z-index: 100;
 }
-  
 .modal .modal__close_button {
     float: right;
 }
@@ -23,6 +25,7 @@
     padding-top: 44px;
     text-align: center;
     font-size: 30px;
+    font-family: 'PantonRegular', Helvetica, Arial, sans-serif;
 }
 .email_pass {
     font-size: 12px;
@@ -85,5 +88,13 @@ input {
 }
 .footer {
     justify-content: space-between;
-
 }
+
+@font-face {
+    font-family: "PantonRegular";
+    src: url("../../fonts/Panton/Panton-Regular.ttf") format("truetype");
+   }
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../../fonts/Ubluntu/Ubuntu-regular.ttf") format("truetype");
+   }

@@ -3,15 +3,13 @@ import EnterToAccountModal from './components/EnterToAccountModal/EnterToAccount
 import Registration from './components/RegistrationModal/Registration';
 import s from './components/EnterToAccountModal/EnterToAccountModal.module.css';
 import sR from './components/RegistrationModal/Registration.module.css';
-
-
+import LoginForm from './components/EnterToAccountModal/LoginForm';
 
 
 class App extends Component {
   state = {
     isEnterOpen: false,
-    isRegistrationOpen: false,
-    isPasswordShown: true
+    isRegistrationOpen: false
   };
 
   toggleEnerModal = () => {
@@ -19,10 +17,6 @@ class App extends Component {
   };
   toggleRegistrationModal = () => {
     this.setState(state => ({ isRegistrationOpen: !state.isRegistrationOpen, isEnterOpen: false }));
-  };
-
-  togglePasswordVisibillity = () => {
-    this.setState(state => ({ isPasswordShown: !state.isPasswordShown}));
   };
 
   render() {
@@ -34,29 +28,14 @@ class App extends Component {
         <div id='Registration'></div>
         <main>
           <button onClick={this.toggleEnerModal}>Личный кабинет</button>
+
           {this.state.isEnterOpen &&
-            <EnterToAccountModal onClose={this.toggleEnerModal}>
-              <h1 className={s.title}>Личный кабинет</h1>
-              <p className={s.email_pass}>Email</p>
-              <input />
-              <div className={s.pass_block}>
-                <p className={s.email_pass}>Пароль</p>
-                <button className={s.eye} onClick={this.togglePasswordVisibillity}></button>
-              </div>
-              <input type={(isPasswordShown) ? 'text' : 'password'} />
-              <button className={s.enter_btn}>Войти</button>
-              <div className={s.footer}>
-                <div>
-                  <p className={s.footer__descr}>Еще нет аккаунта?</p>
-                  <button className={s.footer__btn} onClick={this.toggleRegistrationModal}>Зарегистророваться</button>
-                </div>
-                <div className={s.footer__block}>
-                  <p className={s.footer__descr}>Забыли пароль?</p>
-                  <button className={s.footer__btn} onClick={this.toggleEnerModal} >Восстановить</button>
-                </div>
-              </div>
-            </EnterToAccountModal>
+          <EnterToAccountModal onClose={this.toggleEnerModal}>
+            <LoginForm isEnterOpen={this.isEnterOpen} isRegistrationOpen={this.isRegistrationOpen} 
+            isPasswordShown={this.isPasswordShown}  />
+          </EnterToAccountModal>
           }
+
 
           {this.state.isRegistrationOpen &&
             <Registration onClose={this.toggleRegistrationModal}>

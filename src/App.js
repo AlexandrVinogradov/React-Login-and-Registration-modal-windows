@@ -10,7 +10,8 @@ import sR from './components/RegistrationModal/Registration.module.css';
 class App extends Component {
   state = {
     isEnterOpen: false,
-    isRegistrationOpen: false
+    isRegistrationOpen: false,
+    isPasswordShown: true
   };
 
   toggleEnerModal = () => {
@@ -20,13 +21,15 @@ class App extends Component {
     this.setState(state => ({ isRegistrationOpen: !state.isRegistrationOpen, isEnterOpen: false }));
   };
 
+  togglePasswordVisibillity = () => {
+    this.setState(state => ({ isPasswordShown: !state.isPasswordShown}));
+  };
+
   render() {
+    const {isPasswordShown} = this.state;
+
     return (
       <div className="app">
-        <header>
-          {/* <img src={logo} alt="React logo" />
-                  <h1>React 16</h1> */}
-        </header>
         <div id='EnterToAccountModal'></div>
         <div id='Registration'></div>
         <main>
@@ -38,9 +41,9 @@ class App extends Component {
               <input />
               <div className={s.pass_block}>
                 <p className={s.email_pass}>Пароль</p>
-                <button className={s.eye}></button>
+                <button className={s.eye} onClick={this.togglePasswordVisibillity}></button>
               </div>
-              <input />
+              <input type={(isPasswordShown) ? 'text' : 'password'} />
               <button className={s.enter_btn}>Войти</button>
               <div className={s.footer}>
                 <div>
@@ -67,9 +70,9 @@ class App extends Component {
               <input />
               <div className={sR.pass_block}>
                 <p className={sR.email_pass}>Пароль</p>
-                <button className={sR.eye}></button>
+                <button className={sR.eye} onClick={this.togglePasswordVisibillity}></button>
               </div>
-              <input />
+              <input type={(isPasswordShown) ? 'text' : 'password'} />
               <p className={sR.maxSymbols}>не менее 6 символов</p>
               <div className={sR.agree}>
                 <input type='checkbox'/>

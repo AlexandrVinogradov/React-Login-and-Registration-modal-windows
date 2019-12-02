@@ -4,6 +4,7 @@ import Registration from './components/RegistrationModal/Registration';
 import s from './components/EnterToAccountModal/EnterToAccountModal.module.css';
 import sR from './components/RegistrationModal/Registration.module.css';
 import LoginForm from './components/EnterToAccountModal/LoginForm';
+import RegistrationForm from './components/RegistrationModal/RegistrationForm';
 
 
 class App extends Component {
@@ -39,6 +40,8 @@ class App extends Component {
 
           {this.state.isRegistrationOpen &&
             <Registration onClose={this.toggleRegistrationModal}>
+              {/* <RegistrationForm isEnterOpen={this.isEnterOpen} isRegistrationOpen={this.isRegistrationOpen} /> */}
+
               <h1 className={sR.title}>Регистрация</h1>
               <p className={sR.reg_info}>
               Регистрация занимает 30 секунд. <br/>

@@ -5,6 +5,9 @@ import s from './components/EnterToAccountModal/EnterToAccountModal.module.css';
 import sR from './components/RegistrationModal/Registration.module.css';
 import LoginForm from './components/EnterToAccountModal/LoginForm';
 import RegistrationForm from './components/RegistrationModal/RegistrationForm';
+import { Provider } from 'react-redux';
+import store from './redux/redux-store';
+import LoginFormContainer from './components/EnterToAccountModal/LoginFormContainer';
 
 
 class App extends Component {
@@ -32,8 +35,10 @@ class App extends Component {
 
           {this.state.isEnterOpen &&
           <EnterToAccountModal onClose={this.toggleEnerModal}>
-            <LoginForm isEnterOpen={this.isEnterOpen} isRegistrationOpen={this.isRegistrationOpen} 
-            isPasswordShown={this.isPasswordShown}  />
+            <LoginFormContainer
+            // isEnterOpen={this.isEnterOpen} isRegistrationOpen={this.isRegistrationOpen} 
+            // isPasswordShown={this.isPasswordShown}  
+            />
           </EnterToAccountModal>
           }
 
@@ -72,5 +77,13 @@ class App extends Component {
     );
   }
 }
-export default App;
+
+const ModalApp = () => {
+  return <>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </>
+}
+export default ModalApp;
 

@@ -1,21 +1,21 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
-import profileReducer from "./profile-reducer"
-import newsReducer from "./news-reducer"
+import loginFormReducer from "./loginForm-reducer";
+import registrationFormReducer from "./registrationForm-reducer"
 
 
-import thunkMiddleware from "redux-thunk";
+// import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form';
 
 
 // branch - reducer
 let reducers = combineReducers({
-    profilePage: profileReducer,
-    newsPage: newsReducer,
+    loginForm: loginFormReducer,
+    registrationForm: registrationFormReducer,
     form: formReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));
+const store = createStore(reducers, composeEnhancers(applyMiddleware()));
 
 window.__store__ = store;
 

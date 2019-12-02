@@ -6,12 +6,12 @@ let initialState = {
     isPasswordShown: false
 }
 
-const RegistrationReducer = (state = initialState, action) => {
+const registrationReducer = (state = initialState, action) => {
     switch(action.type) {
         case TOGGLE_PASSWORD_VISIBILLITY: 
             return {
                 ...state,
-                isPasswordShown: !isPasswordShown
+                isPasswordShown: true
             }
         default:
             return state;
@@ -20,4 +20,4 @@ const RegistrationReducer = (state = initialState, action) => {
 
 export const togglePasswordVisibillity = () => ({type: TOGGLE_PASSWORD_VISIBILLITY});
 
-export default RegistrationReducer;
+export default registrationReducer;

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ModalApp from './App';
+import {ModalApp} from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<ModalApp />, document.getElementById('root'));

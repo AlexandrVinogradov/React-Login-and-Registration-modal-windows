@@ -1,22 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import s from './EnterToAccountModal.module.css';
 
 const LoginForm = props => {
-    // state = {
-    //     isPasswordShown: false
-    // };
-    // togglePasswordVisibillity = () => {
-    //     this.setState(state => ({ isPasswordShown: !state.isPasswordShown }));
-    // };
-
-
-        // const { isPasswordShown } = this.state;
-
 
         const { isPasswordShown } = props;
 
-        const onToggleRegistrationModal = () => {
+        const onTogglePasswordVisibillity = () => {
             props.togglePasswordVisibillity(!isPasswordShown)
+        }
+
+        const onToggleRegistrationModal = () => {
+
         }
 
         return <>
@@ -27,7 +21,7 @@ const LoginForm = props => {
                 <p className={s.email_pass}>Пароль</p>
 
 
-                <button className={s.eye} onClick={onToggleRegistrationModal}></button>
+                <button className={s.eye} onClick={onTogglePasswordVisibillity}></button>
 
 
             </div>
@@ -36,7 +30,7 @@ const LoginForm = props => {
             <div className={s.footer}>
                 <div>
                     <p className={s.footer__descr}>Еще нет аккаунта?</p>
-                    <button className={s.footer__btn} onClick={props.toggleRegistrationModal}>Зарегистророваться</button>
+                    <button className={s.footer__btn} onClick={onToggleRegistrationModal}>Зарегистророваться</button>
                 </div>
                 <div className={s.footer__block}>
                     <p className={s.footer__descr}>Забыли пароль?</p>
@@ -44,7 +38,6 @@ const LoginForm = props => {
                 </div>
             </div>
         </>
-    
 }
 export default LoginForm;
 

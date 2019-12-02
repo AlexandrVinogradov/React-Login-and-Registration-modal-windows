@@ -14,7 +14,7 @@ let reducers = combineReducers({
     loginForm: loginFormReducer,
     registrationForm: registrationFormReducer,
     form: formReducer, 
-    App: AppReducer
+    app: AppReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

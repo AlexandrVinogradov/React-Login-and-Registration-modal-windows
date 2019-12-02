@@ -4,13 +4,18 @@ import s from './EnterToAccountModal.module.css';
 const LoginForm = props => {
 
         const { isPasswordShown } = props;
+        const { isRegistrationOpen } = props;
+        const { isEnterOpen } = props;
 
         const onTogglePasswordVisibillity = () => {
             props.togglePasswordVisibillity(!isPasswordShown)
         }
 
         const onToggleRegistrationModal = () => {
-
+            props.toggleEnerModal(!isEnterOpen)
+            props.toggleRegistrationModal(!isRegistrationOpen)
+            console.log(props.isEnterOpen);
+            console.log(props.isRegistrationOpen);
         }
 
         return <>

@@ -11,13 +11,13 @@ const registrationReducer = (state = initialState, action) => {
         case TOGGLE_PASSWORD_VISIBILLITY: 
             return {
                 ...state,
-                isPasswordShown: true
+                isPasswordShown: action.isPasswordShown
             }
         default:
             return state;
     }
 }
 
-export const togglePasswordVisibillity = () => ({type: TOGGLE_PASSWORD_VISIBILLITY});
+export const togglePasswordVisibillity = (isPasswordShown) => ({type: TOGGLE_PASSWORD_VISIBILLITY, isPasswordShown});
 
 export default registrationReducer;

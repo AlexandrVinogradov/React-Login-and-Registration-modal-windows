@@ -6,6 +6,7 @@ import s from './EnterToAccountModal.module.css';
 
 export default class EnterToAccountModal extends React.Component {
     render() {
+        console.log(this.props);
         return ReactDOM.createPortal(
             <div className={s.modal}>
                 <div className={s.popup}> 
@@ -16,4 +17,4 @@ export default class EnterToAccountModal extends React.Component {
             document.getElementById('EnterToAccountModal')
         );
     }
-}
+} 

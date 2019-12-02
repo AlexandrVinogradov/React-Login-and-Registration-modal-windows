@@ -5,6 +5,8 @@ import s from './Registration.module.css';
 
 export default class Registration extends React.Component {
     render() {
+        console.log(this.props);
+
         return ReactDOM.createPortal(
             <div className={s.modal}>
                 <div className={s.popup}> 

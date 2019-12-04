@@ -8,7 +8,7 @@ export default class EnterToAccountModal extends React.Component {
     render() {
         console.log(this.props);
         return ReactDOM.createPortal(
-            <div className={s.modal}>
+            <div className={s.modal} onClick={this.props.onClose}>
                 <div className={s.popup}> 
                     <button className={s.modal__close_button} onClick={this.props.onClose}></button>
                     {this.props.children}

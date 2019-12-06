@@ -1,0 +1,38 @@
+.formControl.error input,
+.formControl.error textarea 
+{
+    border: solid red 2px;
+}
+.formControl.error span  
+{
+    color: red;
+}
+
+.formSummaryError {
+    border: red solid 2px;
+    padding: 5px;
+    color: red;
+}
+.textarea {
+    outline:none;
+    padding: 4px;
+    width: 400px;
+    line-height: 1.5;
+    border-radius: 40px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+.input input {
+    outline:none;
+    padding: 4px;
+    width: 200px;
+    line-height: 1.5;
+    border-radius: 40px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+.checkbox {
+    display: flex;
+}
+

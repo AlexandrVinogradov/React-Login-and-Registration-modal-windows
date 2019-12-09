@@ -1,6 +1,8 @@
 import React from 'react';
 import s from './EnterToAccountModal.module.css';
 
+// const maxLength10 = maxLenghtCreator(10);
+
 const LoginForm = props => {
 
         const { isPasswordShown } = props;

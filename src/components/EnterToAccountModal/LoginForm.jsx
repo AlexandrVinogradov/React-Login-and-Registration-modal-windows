@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './EnterToAccountModal.module.css';
+import {maxLenghtCreator} from '../../utilits/validators/validators'
 
-// const maxLength10 = maxLenghtCreator(10);
+const maxLength10 = maxLenghtCreator(10);
 
 const LoginForm = props => {
 
@@ -16,8 +17,6 @@ const LoginForm = props => {
         const onToggleRegistrationModal = () => {
             props.toggleEnerModal(!isEnterOpen)
             props.toggleRegistrationModal(!isRegistrationOpen)
-            console.log(props.isEnterOpen);
-            console.log(props.isRegistrationOpen);
         }
 
         return <>

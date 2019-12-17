@@ -1,8 +1,25 @@
 import React from 'react';
 import s from './EnterToAccountModal.module.css';
-import {maxLenghtCreator} from '../../utilits/validators/validators'
+import {maxLenghtCreator, required} from '../../utilits/validators/validators';
+
+import { reduxForm, Field } from 'redux-form';
+import {Input} from '../../components/FormControl/FormsControls';
 
 const maxLength10 = maxLenghtCreator(10);
+
+const AddNewPostForm = (props) => {
+    return <form onSubmit={props.handleSubmit}>
+        <div>
+            <Field className={s.textarea} validate={[required, maxLength10]}
+                name="newPostText" component={Input} />
+        </div>
+        <div>
+            {/* <button className={s.button}>Add post</button> */}
+        </div>
+    </form>
+}
+const AddPostFormRedux = reduxForm({ form: 'profileAddNewPostForm' })(AddNewPostForm);
+
 
 const LoginForm = props => {
 
@@ -22,7 +39,10 @@ const LoginForm = props => {
         return <>
             <h1 className={s.title}>Личный кабинет</h1>
             <p className={s.email_pass}>Email</p>
-            <input />
+
+            <AddPostFormRedux />
+            {/* <input /> */}
+
             <div className={s.pass_block}>
                 <p className={s.email_pass}>Пароль</p>
 

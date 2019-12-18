@@ -13,9 +13,6 @@ const AddNewPostForm = (props) => {
             <Field className={s.textarea} validate={[required, maxLength10]}
                 name="newPostText" component={Input} />
         </div>
-        <div>
-            {/* <button className={s.button}>Add post</button> */}
-        </div>
     </form>
 }
 const AddPostFormRedux = reduxForm({ form: 'profileAddNewPostForm' })(AddNewPostForm);

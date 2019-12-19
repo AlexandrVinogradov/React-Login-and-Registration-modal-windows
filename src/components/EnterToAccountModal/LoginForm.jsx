@@ -7,7 +7,7 @@ import {Input} from '../../components/FormControl/FormsControls';
 
 const maxLength10 = maxLenghtCreator(10);
 
-const AddNewPostForm = (props) => {
+const EmailForm = (props) => {
     return <form onSubmit={props.handleSubmit}>
         <div>
             <Field className={s.textarea} validate={[required, maxLength10]}
@@ -15,7 +15,18 @@ const AddNewPostForm = (props) => {
         </div>
     </form>
 }
-const AddPostFormRedux = reduxForm({ form: 'profileAddNewPostForm' })(AddNewPostForm);
+const EmailReduxForm = reduxForm({ form: 'profileAddNewPostForm' })(EmailForm);
+
+const PasswordForm = (props) => {
+    console.log(props);
+    return <form onSubmit={props.handleSubmit}>
+        <div>
+            <Field className={s.textarea} validate={[required, maxLength10]}
+                name="newPostText" component={Input} type={props.isPasswordShown ? 'text' : 'password'}/>
+        </div>
+    </form>
+}
+const PasswordReduxForm = reduxForm({ form: 'profileAddNewPostForm' })(PasswordForm);
 
 
 const LoginForm = props => {
@@ -37,7 +48,7 @@ const LoginForm = props => {
             <h1 className={s.title}>Личный кабинет</h1>
             <p className={s.email_pass}>Email</p>
 
-            <AddPostFormRedux />
+            <EmailReduxForm />
             {/* <input /> */}
 
             <div className={s.pass_block}>
@@ -48,6 +59,7 @@ const LoginForm = props => {
 
 
             </div>
+            <PasswordReduxForm />
             <input type={props.isPasswordShown ? 'text' : 'password'} />
             <button className={s.enter_btn}>Войти</button>
             <div className={s.footer}>
